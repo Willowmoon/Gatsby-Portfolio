@@ -9,8 +9,10 @@ const IndexPage = () => (
     <main>
       <img className="first" src={logo} width="35%" alt="Douglas Kelley" />
       <h1>douglas kelley</h1>
-      
-      <div className="center"><p>-  web developer  -</p><br />
+
+      <div className="center">
+        <p>- web developer -</p>
+        <br />
         <AniLink fade to="/about">
           <button className="btn">about</button>
         </AniLink>

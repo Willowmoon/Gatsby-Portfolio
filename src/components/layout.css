@@ -16,6 +16,7 @@
 
 html {
   margin: 0 auto;
+  background-color: #1d1e22;
   background-image: url("../images/bg.jpg");
   background-size: cover;
   background-position: center center;
@@ -78,6 +79,7 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: all 1s linear;
 }
 main .first {
   padding-top: 10vh;
@@ -121,6 +123,7 @@ main .first {
   margin: 5%;
   width: 90%;
   font-size: 0.8em;
+  transition: all 1s linear;
 }
 #picture {
   width: auto;
