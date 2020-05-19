@@ -6,6 +6,7 @@ module.exports = {
     title: `Douglas Kelley`,
     description: `Recent General Assembly Software Engineering Immersive course graduate. Mostly using React/Gatsby with a strong foundation in HTML/CSS/JS.`,
     author: `@douglasshmuglas`,
+    siteUrl: "https://douglaskelley.netlify.app/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,5 +27,6 @@ module.exports = {
         accessToken: process.env.ACCESS_TOKEN,
       },
     },
+    "gatsby-plugin-robots-txt",
   ],
 }
