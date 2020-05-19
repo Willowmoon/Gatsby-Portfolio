@@ -35,7 +35,7 @@ export default class Form extends React.Component {
         <label for="subject">
           <h3>message</h3>
           <br />
-          <textarea id="subject" name="subject" />
+          <textarea id="subject" name="subject" style={{height:"100px"}}/>
         </label>
         <br />
         {status === "SUCCESS" ? (

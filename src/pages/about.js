@@ -8,7 +8,9 @@ const About = () => {
       <SEO title="About" />
       <h1>About Me</h1>
       <div className="container">
-        <div className="about-img"></div>
+        <div className="about-img">
+          <img src="https://i.imgur.com/dv3vmZ1.jpg" alt="Douglas Kelley"/>
+        </div>
         <div className="about-text">
           A bagel fanatic, originally from Long Island, NY. Moved around and
           settled in upstate NY near Syracuse. Now I spend most of my days
@@ -20,7 +22,7 @@ const About = () => {
           apart to figure out how they work. Thank you for visiting and I look
           forward to hearing from you!
         </div>
-        <div>
+        <div style={{ width: "100%", textAlign: "center" }}>
           <a
             href={`Resume.pdf`}
             target="_blank"

@@ -1,0 +1,42 @@
+.project {
+  transition: all 0.3s linear;
+  height: 100%;
+}
+
+.img-container {
+  position: relative;
+  transition: all 0.3s linear;
+  object-fit: cover;
+  height: 300px;
+  width: auto;
+
+}
+.img {
+  transition: all 0.3s linear;
+  height: 100%;
+
+}
+.img-container:hover .img {
+  opacity: 0.3;
+  width: 100%;
+}
+
+.link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-transform: uppercase;
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.link:hover {
+  background: var(--gray);
+  color: var(--gold);
+}
+.img-container:hover .link {
+  opacity: 1;
+}
