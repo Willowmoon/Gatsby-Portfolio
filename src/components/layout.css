@@ -6,11 +6,143 @@
   --gray: #393f4d;
   --black: #1d1e22;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 960px;
+}
+
+html {
+  margin: 0 auto;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: "Lora", serif;
+  color: var(--lightgray);
+  background: var(--black);
+  opacity: 0.99;
+  line-height: 1.4;
+  font-size: 1rem;
+  margin: 1%;
+}
+
 h1 {
   color: var(--gold);
   font-size: 3em;
   font-family: "Vollkorn", serif;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
 }
+
+h2 {
+  color: var(--lightgold);
+  font-size: 2em;
+  font-family: "Vollkorn", serif;
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+}
+h3{
+  color: var(--lightgold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: -18px;
+  border-bottom: 1px solid var(--gold);
+}
+
+p {
+  color: var(--lightgold);
+  font-size: 1.5em;
+  font-family: "Lora", serif;
+  margin-bottom: 1.25rem;
+}
+
 a {
   text-decoration: none !important;
+  color: var(--lightgold);
+  text-transform: capitalize;
+}
+
+main {
+  min-height: 97.5vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main .first {
+  padding-top: 10vh;
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (max-width: 700px) {
+  .first {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .center button {
+    width: 75%;
+    margin: 1%;
+  }
+}
+.center {
+  margin: 0 auto;
+  font-style: italic;
+  text-align: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  color: var(--gray);
+  border: 2px solid var(--lightgold);
+  padding: 0.9rem 1.6rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  background: var(--lightgold);
+  letter-spacing: 4px;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.container {
+  margin: 3%;
+}
+footer {
+  text-align: center;
+  margin-bottom: 1%;
+  justify-content: center;
+}
+form {
+  min-height: 60vh;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+@media screen and (max-width:600px){
+  form{
+    width: 80%;
+  }
+}
+input,
+textarea {
+  width: 95%;
+  margin: 2%;
+  padding: 2%;
+  background-color: transparent;
+  border: 0.5px solid var(--gold);
+  color: var(--lightgold)
 }

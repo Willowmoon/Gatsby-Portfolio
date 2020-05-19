@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { FaAlignRight } from "react-icons/fa"
-import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
+import styles from "../css/navbar.module.css"
 import logo from "../images/logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,28 +10,39 @@ const Navbar = () => {
     setIsOpen((isOpen) => !isOpen)
   }
   return (
-    <nav>
-      <div>
-        <div>
+    <nav className={styles.navbar}>
+      <div className={styles.navCenter}>
+        <div className={styles.navHeader}>
           <AniLink fade to="/">
-            <img src={logo} width="30px" alt="Douglas Kelley" />
-          </AniLink>
-          <button type="button" onClick={toggleNav}>
-            <FaAlignRight />
+          <img src={logo} width="30px" alt="Douglas Kelley" /></AniLink>
+          <button type="button" className={styles.logoBtn} onClick={toggleNav}>
+            <FaAlignRight className={styles.logoIcon} />
           </button>
         </div>
-        <ul style={isOpen ? { height: "216px" } : { height: "0px" }}>
-          {links.map((item, index) => {
-            return (
-              <li key={index}>
-                <AniLink fade to={item.path}>
-                  {item.text}
-                </AniLink>
-              </li>
-            )
-          })}
+        <ul
+          className={
+            isOpen
+              ? `${styles.navLinks} ${styles.showNav}`
+              : ` ${styles.navLinks}`
+          }
+        >
+          <li>
+            <AniLink fade to="/about">
+              about
+            </AniLink>
+          </li>
+          <li>
+            <AniLink fade to="/projects">
+              projects
+            </AniLink>
+          </li>
+          <li>
+            <AniLink fade to="/contact">
+              contact
+            </AniLink>
+          </li>
         </ul>
-        <div>
+        <div className={styles.navSocialLinks}>
           {socialIcons.map((item, index) => {
             return (
               <a

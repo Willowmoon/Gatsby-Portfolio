@@ -1,20 +1,9 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
 
 const Footer = () => {
   return (
     <footer>
-      <div>
-        {links.map((item, index) => {
-          return (
-            <AniLink fade key={index} to={item.path}>
-              {item.text}
-            </AniLink>
-          )
-        })}
-      </div>
       <div>
         {socialIcons.map((item, index) => {
           return (
@@ -24,12 +13,17 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {item.icon}
+              &nbsp;{item.icon}
+              &nbsp;
             </a>
           )
         })}
       </div>
-      <div>copyright &copy; Douglas Kelley {new Date().getFullYear()}</div>
+      <div style={{ fontSize: "10px" }}>
+        Copyright &copy; Douglas Kelley {new Date().getFullYear()}&nbsp; //
+        Background Photo by
+        <a href="https://unsplash.com/@miteneva"> Maria Teneva on Unsplash</a>
+      </div>
     </footer>
   )
 }
